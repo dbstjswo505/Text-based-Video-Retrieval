@@ -6,7 +6,7 @@ Text-based video moment retrieval (TVMR) aims to localize target moments in untr
 TVMR is proposed to debiasing in video moment retrieval via conjugating retrieval bias in either positive or negative way.
 
 ## Overview
-TVMR is composed of 3 modules: (a) BMR which reveals biased retrieval, (b) NMR which performs accurate retrieval, (c) SQuiD which removes bad biases from accurate retrieval of NMR subject to the meaning of query.
+TVMR is composed of 3 modules: (a) BMR which reveals biased retrieval, (b) NMR which performs accurate retrieval, (c) counterfactual framework which removes bad biases from accurate retrieval of NMR subject to the meaning of query.
 
 
 ## Implementation
@@ -21,13 +21,13 @@ cd Text-based-Video-Retrieval
 2. Prepare the environment
 ```
 conda env create -f tvmr.yml
-conda activate squid
+conda activate tvmr
 ```
 
 
 3. Input Features Download
 
-Download [tvr_feature_dataset](https://drive.google.com/file/d/1AfmhROqBPlT49jfU0gyyv2Eyl9XNHkCp/view?usp=sharing), which should be located in the main folder SQuiDNet with the directory like below:
+Download [tvr_feature_dataset](https://drive.google.com/file/d/1AfmhROqBPlT49jfU0gyyv2Eyl9XNHkCp/view?usp=sharing), which should be located in the main folder TVMR with the directory like below:
 
 ```
 data
