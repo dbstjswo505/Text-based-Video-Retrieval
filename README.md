@@ -1,20 +1,12 @@
-# SQuiDNet: Selective Query-guided Debiasing Network for Video Corpus Moment Retrieval
-
-We are providing the Code for ECCV 2022 paper "Selective Query-guided Debiasing for Video Corpus Moment Retrieval"
-
-Author: "Sunjae Yoon, Ji Woo Hong, Eunseop Yoon, Dahyun Kim, Junyoeng Kim, Hee Suk Yoon and Chang D. Yoo
+# Text-based Video Moment Retrieval for Multimodal Dailogue System
 
 ## Task: Video Corpus Moment Retrieval
-Video moment retrieval (VMR) aims to localize target moments in untrimmed videos pertinent to given textual query. Existing retrieval systems tend to rely on retrieval bias as a shortcut and thus, fail to sufficiently learn multi-modal interactions between query and video.
+Text-based video moment retrieval (TVMR) aims to localize target moments in untrimmed videos pertinent to given textual query. Existing retrieval systems tend to rely on retrieval bias as a shortcut and thus, fail to sufficiently learn multi-modal interactions between query and video.
 
-SQuiDNet is proposed to debiasing in video moment retrieval via conjugating retrieval bias in either positive or negative way.
+TVMR is proposed to debiasing in video moment retrieval via conjugating retrieval bias in either positive or negative way.
 
-<p lign="center">
-	<img src="./figs/Intro.PNG" alt="Intro" width="70%" height="70%"/>
-</P>
-
-## SQuiDNet Overview
-SQuiDNet is composed of 3 modules: (a) BMR which reveals biased retrieval, (b) NMR which performs accurate retrieval, (c) SQuiD which removes bad biases from accurate retrieval of NMR subject to the meaning of query.
+## Overview
+TVMR is composed of 3 modules: (a) BMR which reveals biased retrieval, (b) NMR which performs accurate retrieval, (c) SQuiD which removes bad biases from accurate retrieval of NMR subject to the meaning of query.
 
 <p lign="center">
 	<img src="./figs/Model.PNG" alt="Model" width="80%" height="80%"/>
@@ -25,13 +17,13 @@ Our results and further studies will also be updated soon!
 1. Clone the repositery
 
 ```
-git clone https://github.com/dbstjswo505/SQuiDNet.git
-cd SQuiDNet
+git clone https://github.com/dbstjswo505/Text-based-Video-Retrieval.git
+cd Text-based-Video-Retrieval
 ```
 
 2. Prepare the environment
 ```
-conda env create -f squid.yml
+conda env create -f tvmr.yml
 conda activate squid
 ```
 
@@ -58,14 +50,14 @@ It is also available to download visual features (ResNet, SlowFast) obtained fro
 Feature extraction is available via understanding and running the code details: [visual feature extraction](https://github.com/linjieli222/HERO_Video_Feature_Extractor), [text feature extraction](https://github.com/jayleicn/TVRetrieval/tree/master/utils/text_feature).
 The noun and predicate for coocurrence table are extracted using the code: [noun and predicate extraction](https://github.com/BigRedT/info-ground).
 
-4. SQuiDNet Training
+4. Training
 
 ```
 bash scripts/train.sh
 ```
 `train.sh` is performed with our defined hyperparameters, see the details in the code and is possible to modified experiement for more better performances including hyperparameter tunning.
 
-5. SQuiDNet Inference.
+5. Inference.
 
 ```
 bash scripts/inference.sh
@@ -91,17 +83,5 @@ This code is implemented on top of following contributions:
 [MME](https://github.com/antoine77340/Mixture-of-Embedding-Experts).
 We thank the authors for open-sourcing these great projects and papers!
 
-This work was partly supported by Institute for Information & communications Technology Promotion(IITP) grant funded by the Korea government(MSIT) (No. 2021-0-01381, Development of Causal AI through Video Understanding) and partly supported by Institute of Information & communications Technology Planning & Evaluation(IITP) grant funded by the Korea government(MSIT) (No. 2022-0-00184, Development and Study of AITechnologies to Inexpensively Conform to Evolving Policy on Ethics)
+This work was partly supported by the National Research Foundation of Korea (NRF) grant funded by the Korea government(MSIT) (No. 2022R1A2C2012706)
 
-## Citation
-If you find this code useful for your research, please cite our paper:
-```
-@inproceedings{yoon2022selective,
-  title={Selective Query-Guided Debiasing for Video Corpus Moment Retrieval},
-  author={Yoon, Sunjae and Hong, Ji Woo and Yoon, Eunseop and Kim, Dahyun and Kim, Junyeong and Yoon, Hee Suk and Yoo, Chang D},
-  booktitle={European Conference on Computer Vision},
-  pages={185--200},
-  year={2022},
-  organization={Springer}
-}
-```
