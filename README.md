@@ -8,9 +8,6 @@ TVMR is proposed to debiasing in video moment retrieval via conjugating retrieva
 ## Overview
 TVMR is composed of 3 modules: (a) BMR which reveals biased retrieval, (b) NMR which performs accurate retrieval, (c) SQuiD which removes bad biases from accurate retrieval of NMR subject to the meaning of query.
 
-<p lign="center">
-	<img src="./figs/Model.PNG" alt="Model" width="80%" height="80%"/>
-</P>
 
 ## Implementation
 Our results and further studies will also be updated soon!
